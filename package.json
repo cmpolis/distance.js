@@ -1,10 +1,11 @@
 {
   "name": "distancejs",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Vector distance and similarity measurements in JavaScript. eg: Euclidean, Manhattan, Chebyshev, angular distance.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha test/*-test.js",
+    "build": "browserify index.js -s distancejs -o distance.js"
   },
   "author": "Chris Polis",
   "license": "MIT",
