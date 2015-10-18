@@ -1,6 +1,8 @@
 # distance.js
 
-Vector distance and similarity measurements in JavaScript. eg: Euclidean, Manhattan, Chebyshev, Angular. *by [@ChrisPolis](http://twitter.com/chrispolis)*
+Fast vector distance and similarity measurements in JavaScript. eg: Euclidean, Manhattan, Chebyshev, Angular.
+
+*by [@ChrisPolis](http://twitter.com/chrispolis)*
 
 ## Available measurements
 
@@ -15,8 +17,10 @@ Vector distance and similarity measurements in JavaScript. eg: Euclidean, Manhat
 #### `distancejs[distanceType](arrayA, arrayB, [accessor]);`
 
 eg:
-Two numeric arrays: `distancejs.euclidean(arrayA, arrayB);`
-Two array of objects: `distancejs.euclidean(arrayA, arrayB, function(d) { return d.val; });`
+
+Numeric arrays: `distancejs.euclidean(arrayA, arrayB);`
+
+Array of objects: `distancejs.euclidean(arrayA, arrayB, function(d) { return d.val; });`
 
 ## License
 
