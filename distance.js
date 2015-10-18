@@ -7,11 +7,12 @@ module.exports = {
   euclidean: require('./src/euclidean'),
   manhattan: require('./src/manhattan'),
   chebyshev: require('./src/chebyshev'),
+  angular: require('./src/angular'),
   cosineSimilarity: require('./src/cosine-similarity'),
   angularSimilarity: require('./src/angular-similarity')
 };
 
-},{"./src/angular-similarity":2,"./src/chebyshev":3,"./src/cosine-similarity":4,"./src/euclidean":5,"./src/manhattan":6}],2:[function(require,module,exports){
+},{"./src/angular":3,"./src/angular-similarity":2,"./src/chebyshev":4,"./src/cosine-similarity":5,"./src/euclidean":6,"./src/manhattan":7}],2:[function(require,module,exports){
 //
 //
 //
@@ -23,7 +24,19 @@ module.exports = function(a, b, accessor) {
   return 1 - ( (2 * Math.acos(cosSimValue)) / Math.PI);
 };
 
-},{"./cosine-similarity":4}],3:[function(require,module,exports){
+},{"./cosine-similarity":5}],3:[function(require,module,exports){
+//
+//
+//
+var cosineSimilarity = require('./cosine-similarity');
+
+//
+module.exports = function(a, b, accessor) {
+  var cosSimValue = cosineSimilarity.apply(null, arguments);
+  return (2 * Math.acos(cosSimValue)) / Math.PI;
+};
+
+},{"./cosine-similarity":5}],4:[function(require,module,exports){
 //
 //
 //
@@ -39,7 +52,7 @@ module.exports = function(a, b, accessor) {
   return distance;
 };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 //
 //
 //
@@ -60,7 +73,7 @@ module.exports = function(a, b, accessor) {
   return dotProduct / ( Math.sqrt(xMagnitude) * Math.sqrt(yMagnitude) );
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 //
 //
 //
@@ -76,7 +89,7 @@ module.exports = function(a, b, accessor) {
   return Math.sqrt(distance);
 };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 //
 //
 //

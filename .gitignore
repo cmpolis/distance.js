@@ -3,4 +3,5 @@
 .swo
 
 #
+.npmrc
 node_modules/
